@@ -1,5 +1,7 @@
 GeekSurvey::Application.routes.draw do
-  resources :surveys
+  resources :surveys do
+    resources :opinions
+  end
   root :to => "surveys#index"
 
   # The priority is based upon order of creation:
