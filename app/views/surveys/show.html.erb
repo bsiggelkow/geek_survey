@@ -1,0 +1,19 @@
+<h2>Survey</h2>
+<p>
+  <label>Question:</label><span><%= @survey.question %></span><br />
+  <label>Posted On:</label><span><%= @survey.created_at %></span><br />
+  <label>Result:</label><span><%= @survey.result %></span></br />
+</p>
+<h2>Opinions</h2>
+<ul>
+  <%- @survey.opinions.order('created_at desc').each do |opinion| %>
+    <li>
+      <label>Value:</label><span><%= opinion.value %></span><br />
+      <label>Posted On:</label><span><%= opinion.created_at %></span><br />
+      <label>Comment:</label><span><%= opinion.comment %></span></br />
+    </li>
+  <%- end %>
+</ul>
+<p><%= link_to "State your opinion!", new_survey_opinion_path(@survey) %></p>
+  
+  

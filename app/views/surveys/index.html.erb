@@ -2,7 +2,9 @@
   <ul>
     <%- @surveys.each do |survey| %>
       <li>
-        <%= survey.question %>
+        <span>Question: <%= survey.question %></span><br/>
+        <span>Result: <%= survey.result %></span><br/>
+        <span class="show_survey"><%= link_to 'Show', survey_url(survey) %></span>&nbsp;|&nbsp;
         <span class="edit_survey"><%= link_to 'Edit', edit_survey_url(survey) %></span>
       </li>
     <%- end %>
