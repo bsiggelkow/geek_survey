@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
       end
     end
   end
+  
+  has_many :surveys, :dependent => :destroy
 
   def twitter
     configure_twitter!

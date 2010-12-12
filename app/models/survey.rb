@@ -8,6 +8,10 @@ class Survey < ActiveRecord::Base
   end
 
   def tweet
-    user.twitter.update("#{question} #geek_survey")
+    user.twitter.update("#{question} #{link} #geeksurvey")
+  end
+
+  def link
+    "http://geeksurvey.com/surveys/#{id}"
   end
 end
