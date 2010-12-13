@@ -20,9 +20,8 @@ class User < ActiveRecord::Base
 
   def configure_twitter!
     Twitter.configure do |config|
-      # TODO: Figure out better way of getting app key and secret
-      config.consumer_key       = "MZNApF2jR4DL5oePdVlg"
-      config.consumer_secret    = "8yUe0ggZQ2TTjInnzPbhoypU3AeKnazhXahATcYYs"
+      config.consumer_key       = APP_CONFIG['twitter_api_key']
+      config.consumer_secret    = APP_CONFIG['twitter_api_secret']
       config.oauth_token        = access_token
       config.oauth_token_secret = access_secret
     end

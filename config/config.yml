@@ -1,0 +1,12 @@
+defaults: &defaults
+  twitter_api_key: MZNApF2jR4DL5oePdVlg
+  twitter_api_secret: 8yUe0ggZQ2TTjInnzPbhoypU3AeKnazhXahATcYYs
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
