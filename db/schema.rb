@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101212041726) do
+ActiveRecord::Schema.define(:version => 20101216044154) do
 
   create_table "opinions", :force => true do |t|
     t.integer  "value",      :default => 0
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20101212041726) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.integer  "twitter_id"
+    t.string   "shortened_url"
   end
 
   create_table "users", :force => true do |t|
