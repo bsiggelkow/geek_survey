@@ -19,8 +19,7 @@ class SurveysController < ApplicationController
 
   # POST /surveys
   def create
-    puts params
-    @survey = Survey.new(params[:survey])
+    @survey = Survey.new(params[:survey].merge(:user => current_user))
     if @survey.save
       redirect_to surveys_url
     else

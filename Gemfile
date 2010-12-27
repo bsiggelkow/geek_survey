@@ -8,6 +8,7 @@ gem 'rails', '3.0.3'
 gem 'mysql2'
 gem 'omniauth'
 gem 'twitter'
+gem 'gus'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -32,4 +33,5 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.0.1'
   gem 'cucumber-rails'
   gem 'capybara'
+  gem 'factory_girl_rails'
 end
